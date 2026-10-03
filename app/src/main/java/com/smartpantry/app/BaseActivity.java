@@ -9,7 +9,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 /** Shared bottom-navigation setup used by the Pantry, Recipes and Settings screens. */
 public abstract class BaseActivity extends AppCompatActivity {
 
+    private int navId;
+
     protected void setupBottomNav(int selectedId) {
+        navId = selectedId;
         BottomNavigationView nav = findViewById(R.id.bottom_nav);
         nav.setSelectedItemId(selectedId);
         nav.setOnItemSelectedListener(item -> {
@@ -29,5 +32,13 @@ public abstract class BaseActivity extends AppCompatActivity {
             if (!(this instanceof MainActivity)) finish();
             return true;
         });
+    }
+
+    /** Re-highlights this screen's tab whenever the screen becomes visible again. */
+    @Override
+    protected void onResume() {
+        super.onResume();
+        BottomNavigationView nav = findViewById(R.id.bottom_nav);
+        if (nav != null && navId != 0) nav.setSelectedItemId(navId);
     }
 }
