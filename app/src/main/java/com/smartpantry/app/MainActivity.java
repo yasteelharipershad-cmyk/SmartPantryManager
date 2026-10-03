@@ -51,6 +51,7 @@ public class MainActivity extends BaseActivity implements PantryAdapter.Listener
 
     private void refresh() {
         List<PantryItem> items = db.getAllItems();
+        setTitle("My Pantry (" + items.size() + ")");
         SharedPreferences prefs = getSharedPreferences(SettingsActivity.PREFS, MODE_PRIVATE);
         adapter.setItems(items, prefs.getBoolean(SettingsActivity.KEY_EXPIRY_ALERTS, true));
         tvEmpty.setVisibility(items.isEmpty() ? View.VISIBLE : View.GONE);
