@@ -43,6 +43,7 @@ public class SuggestedActivity extends BaseActivity {
         super.onResume();
         List<Recipe> suggested = RecipeMatcher.getSuggested(db.getAllItems(), db.getAllRecipes());
         adapter.setRecipes(suggested);
+        setTitle("Suggested Recipes (" + suggested.size() + ")");
         // Friendly feedback instead of a blank screen when nothing matches.
         tvEmpty.setVisibility(suggested.isEmpty() ? View.VISIBLE : View.GONE);
     }
