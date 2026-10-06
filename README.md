@@ -35,4 +35,4 @@ SQLite via `SQLiteOpenHelper` runs locally on the device, needs no account, serv
 | `SettingsActivity` | Settings |
 
 ## Author
-Yasteel Haripershad, Mobile App Development 700, Richfield
+Yasteel Haripershad, 402306816, Mobile App Development 700, Richfield 
