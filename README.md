@@ -35,4 +35,14 @@ SQLite via `SQLiteOpenHelper` runs locally on the device, needs no account, serv
 | `SettingsActivity` | Settings |
 
 ## Author
-Yasteel Haripershad, 402306816, Mobile App Development 700, Richfield 
+Yasteel Haripershad, 402306816, Mobile App Development 700, Richfield
+
+## Screenshots
+
+| Pantry list | Add ingredient | Recipe suggested |
+|---|---|---|
+| ![Pantry list](Screenshots/11_pantry_list.png) | ![Add form](Screenshots/02_add_form.png) | ![Suggested](Screenshots/07_recipes_match.png) |
+
+| Recipe detail | Expiry alert | Settings |
+|---|---|---|
+| ![Recipe detail](Screenshots/08_recipe_detail.png) | ![Expiry alert](Screenshots/09_expiry_alert.png) | ![Settings](Screenshots/15_settings_about.png) |
